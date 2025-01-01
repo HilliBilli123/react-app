@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+npm i - установка node module
+npm run dev - запустить проект
+npm install react-router-dom - для установки зависимости
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+src/
+├── assets/ // Статические файлы (изображения, шрифты, CSS)
+├── components/ // Переиспользуемые компоненты
+├── pages/ // Страницы приложения
+├── hooks/ // Кастомные хуки
+├── context/ // Контекст (React Context API)
+├── types/ // Общие типы и интерфейсы TypeScript
+├── utils/ // Вспомогательные функции
+├── services/ // API-сервисы или взаимодействие с сервером
+├── App.tsx // Главный компонент
+├── index.tsx // Точка входа в приложение
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Работа с react-router-dom
+├──1.Для того что бы приложение работала с router-dom нужно оборачивать все в BrowserRouter в пративном случае нечего работать не будет
+├──2.Как строится переход по страницам
+├──3.BrowserRouter > Header, Routes > Rote path="/" element={<element/>}
+├──4.Реализация перехода 5.<Link to="/">Home</Link>
