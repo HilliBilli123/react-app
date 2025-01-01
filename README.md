@@ -19,3 +19,6 @@ src/
 ├──2.Как строится переход по страницам
 ├──3.BrowserRouter > Header, Routes > Rote path="/" element={<element/>}
 ├──4.Реализация перехода 5.<Link to="/">Home</Link>
+
+Снипиты
+├──1.rfc для создание компонента

@@ -5,15 +5,18 @@ import Home from "./pages/Home/Home";
 import Catalog from "./pages/Catolog/Catalog";
 import Cart from "./pages/Cart/Cart";
 import Contact from "./pages/Contact/Contact";
+import Login from "./pages/Login/Login";
+
 function App() {
   return (
     <BrowserRouter>
-      <Header /> {/* Заголовок с навигацией */}
+      <Header />
       <Routes>
         <Route index element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );

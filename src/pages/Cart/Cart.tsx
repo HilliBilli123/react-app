@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-
-export default class Cart extends Component {
-  render() {
-    return <div>Cart</div>;
-  }
+export default function Cart() {
+  return (
+    <div>
+      <div className="content-width">Корзина</div>
+    </div>
+  );
 }

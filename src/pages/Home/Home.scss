@@ -1,0 +1,86 @@
+@import "../../assets/style/colors";
+@import "../../assets/style/varibal";
+
+.home-page {
+  .home-page_slider {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    align-items: center;
+    height: calc($index * 20);
+    overflow: hidden; // Скрыть лишние слайды, которые не показываются
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: left 1s linear; // Плавный переход для слайдов
+      position: absolute; // Сделаем слайды абсолютно позиционированными для плавного сдвига
+      left: 100%; // Изначально слайды расположены справа (для анимации)
+      top: 0;
+
+      &.active {
+        left: 0; // Когда слайд активен, он должен быть в центре
+      }
+
+      &.prev {
+        left: -100%; // Слайды с классом prev сдвигаются влево
+      }
+
+      &.next {
+        left: 100%; // Слайды с классом next сдвигаются вправо
+      }
+
+      .slide-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: $slide-bg;
+        border-radius: 5px;
+        .slide-content_text__block {
+          padding: 20px;
+          width: 50%;
+          .text-large_text {
+            font-size: 46px;
+            font-weight: 600;
+            margin-bottom: 20px;
+          }
+          .text-under_text {
+            font-size: 23px;
+          }
+        }
+        .slide-content_img {
+          width: 400px;
+          height: 400px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+          }
+        }
+      }
+    }
+
+    .slide-buttons {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      top: 50%;
+      // transform: translateY(-50%); // Выравнивание по вертикали
+      .slide-button_style {
+        background-color: $button-color;
+        color: $text-color;
+        cursor: pointer;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

@@ -1,7 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class Catalog extends Component {
-  render() {
-    return <div>Catalog</div>;
-  }
+export default function Catalog() {
+  return (
+    <div>
+      <div className="content-width">Каталог</div>
+    </div>
+  );
 }
